@@ -1,0 +1,5 @@
+<?php ob_start(); $mhs = $mhs ?? []; $errors = $errors ?? []; ?>
+<h1><?= htmlspecialchars($judul) ?></h1>
+<?php if ($errors): ?><div class="alert alert-danger"><ul><?php foreach ($errors as $error): ?><li><?= htmlspecialchars($error) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
+<form method="post" action="<?= htmlspecialchars($aksi) ?>"><div class="form-group"><label>Nama</label><input class="form-control" name="nama" value="<?= htmlspecialchars($mhs['nama'] ?? '') ?>"></div><div class="form-group"><label>NRP</label><input class="form-control" name="nrp" value="<?= htmlspecialchars($mhs['nrp'] ?? '') ?>"></div><div class="form-group"><label>Email</label><input type="email" class="form-control" name="email" value="<?= htmlspecialchars($mhs['email'] ?? '') ?>"></div><div class="form-group"><label>Jurusan</label><input class="form-control" name="jurusan" value="<?= htmlspecialchars($mhs['jurusan'] ?? '') ?>"></div><button class="btn btn-primary">Simpan</button> <a class="btn btn-secondary" href="/mahasiswa">Batal</a></form>
+<?php $content = ob_get_clean(); $title = $judul; require __DIR__ . '/../layouts/app.php'; ?>

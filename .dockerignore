@@ -1,0 +1,7 @@
+.git
+.gitignore
+start.bat
+start.sh
+php.ini
+README.md
+**/*.log

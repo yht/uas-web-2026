@@ -1,0 +1,1 @@
+<?php http_response_code(404); ob_start(); ?><div class="alert alert-danger"><h1>404</h1><p>Halaman atau data tidak ditemukan.</p><a href="/mahasiswa">Kembali ke daftar</a></div><?php $content = ob_get_clean(); $title = '404'; require __DIR__ . '/layouts/app.php'; ?>

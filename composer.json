@@ -1,0 +1,9 @@
+{
+    "name": "uas/laravel-app-uas",
+    "description": "Implementasi Laravel aplikasi data mahasiswa",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0"
+    }
+}
